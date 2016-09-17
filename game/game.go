@@ -1,18 +1,19 @@
 package game
 
+// CardGame represents a conceptual card game
 type CardGame interface {
 	Start()
 	TakeTurn() TurnResult
 	IsOver() bool
-	Result() GameResult
+	Result() Result
 }
 
-// Result represents the outcome of a Turn in a CardGame
+// TurnResult represents the outcome of a Turn in a CardGame
 type TurnResult struct {
 	Winners []Player
 }
 
 // Result represents the outcome of a Turn in a CardGame
-type GameResult struct {
+type Result struct {
 	Winners []Player
 }
